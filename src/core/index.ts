@@ -20,8 +20,4 @@ export class MultiSigOffChainSDK {
   public async signOffChainTransaction(wallet: Wallet, tx: OffChainTransaction) {
     return wallet.signTypedData(this.domain, EIP712_OFFCHAIN_TRANSACTION_TYPES, { ...tx })
   }
-
-  public async recoverCancelTxNonce(wallet: Wallet, nonce: BigInt) {
-    return recoverAddress(this.domain, EIP712_NONCE_TYPES, { nonce })
-  }
 }
