@@ -4,14 +4,14 @@ export const DOMAIN_BASE_CONFIG = {
 }
 
 export const EIP712_NONCE_TYPES = {
-  Nonce: [{ name: 'nonce', type: 'uint256' }],
+  Nonce: [{ name: 'nonce', type: 'uint' }],
 }
 
 export const EIP712_OFFCHAIN_TRANSACTION_TYPES = {
   OffChainTransaction: [
     { name: 'to', type: 'address' },
-    { name: 'value', type: 'uint256' },
+    { name: 'value', type: 'uint' },
     { name: 'data', type: 'bytes' },
-    { name: 'nonce', type: 'uint256' },
+    { name: 'nonce', type: 'uint' },
   ],
 }
