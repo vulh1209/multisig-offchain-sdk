@@ -11,11 +11,11 @@
 
 ## Structure
 
-| Codebase         | Description |
-| ---------------- | ----------- |
-| [core](src/core) | SDK         |
-| [core](src/types)| types       |
-| [core](src/config)| constants   |
+| Codebase          | Description |
+| ----------------  | ----------- |
+| [core](src/core)  | SDK         |
+| [types](src/types)| types       |
+| [config](src/config)| constants   |
 
 ---
 
@@ -38,7 +38,7 @@
     </tr>
     <tr>
         <td valign="top">
-            <img valign="bottom" style="margin-right: 8px" src="https://nestjs.com/img/logo-small.svg" width="24" alt="EIP712" />
+            <img valign="bottom" style="margin-right: 8px" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg" width="24" alt="EIP712" />
                 <a href="https://eips.ethereum.org/EIPS/eip-712" target="_blank">Sign & recover address with IEP712</a>
             </td>
         <td valign="bottom">A procedure for hashing and signing of typed structured data as opposed to just bytestrings.</td>
@@ -57,16 +57,16 @@
 
 <table>
     <tr>
-        <td>const polynomial = new Polynomial()</td>
-        <td>init polynomial</td>
+        <td>const sdk = new MultiSigOffChainSDK(address: HexString,chainId: BigInt)</td>
+        <td>init SDK</td>
     </tr>
     <tr>
-        <td>polynomial.createShares(n:number)</td>
-        <td>split privateKey to n share</td>
+        <td>sdk.signCancelTxNonce(wallet: Wallet,nonce: BigInt) : Promise<string> </td>
+        <td>sign cancel transaction nonce</td>
     </tr>
     <tr>
-        <td>polynomial.reconstructPrivateKey(share1: Share, share2: Share)</td>
-        <td>reconstruct 2 of n share to private key</td>
+        <td>sdk.signOffChainTransaction(wallet: Wallet,tx: OffChainTransaction) : Promise<string> </td>
+        <td>sign offchain transaction</td>
     </tr>
 
 </table>
